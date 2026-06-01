@@ -14,10 +14,11 @@ html, body {
   height: 100%;
 }
 
+
 #app {
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
 }
 
 /* ------ NAVBAR ------ */
@@ -247,4 +248,38 @@ textarea.form-control:focus {
 .btn-create-post:hover {
   background-color: #004a8f;
   color: white;
+}
+
+/* ------ FOOTER ------ */
+.app-footer {
+  background: #111111;
+  color: #ffffff;
+  padding: 1rem 0;
+  font-size: 0.85rem;
+}
+
+.footer-brand {
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.footer-brand b {
+  color: #0062bd;
+}
+
+.footer-link {
+  color: #9ca3af;
+  text-decoration: none;
+  font-size: 0.85rem;
+  transition: color 0.2s;
+}
+
+.footer-link:hover {
+  color: #009124;
+}
+
+.footer-copy {
+  color: #9ca3af;
 }

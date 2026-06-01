@@ -57,7 +57,7 @@ const login = async () => {
     });
     const token = res.data.token;
     const decoded = jwtDecode(token);
-    userStore.setUser(token, decoded.role === "admin", res.data.username);
+    userStore.setUser(token, decoded.isAdmin, res.data.username);
     router.push({ name: "Home" });
   } catch (err) {
     errorMsg.value = err.response?.data?.error || "Login failed.";
