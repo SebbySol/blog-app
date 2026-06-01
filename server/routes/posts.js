@@ -2,7 +2,7 @@ const router = require("express").Router();
 const Post = require("../models/Post");
 const auth = require("../middleware/auth");
 
-// GET all posts (public)
+// GET all posts (publicc)
 router.get("/", async (req, res) => {
   try {
     const posts = await Post.find().populate("author", "username");
