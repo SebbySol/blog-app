@@ -1,0 +1,250 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #080c0e;
+  font-family: "Inter", sans-serif;
+  color: #dcf8ff;
+}
+
+html, body {
+  height: 100%;
+}
+
+#app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* ------ NAVBAR ------ */
+.navbar {
+  background-color: #111111;
+  padding: 1.5rem 2rem;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.122) !important;
+  position: relative;
+  z-index: 1050;
+}
+
+.navbar-brand {
+  font-size: 2.2rem;
+  font-family: 'Inter', sans-serif;
+  font-weight: 900;
+  color: #dcf8ff !important;
+  text-transform: uppercase;
+}
+
+.navbar-brand b {
+  color: #0062bd;
+  font-weight: 900;
+}
+
+.navbar-toggler {
+  border: 1px solid #dcf8ff;
+}
+
+.navbar-toggler-icon {
+  filter: invert(1);
+}
+
+.nav-login {
+  color: #dcf8ff !important;
+  padding: 8px 20px !important;
+  border-radius: 6px;
+  border: 1px solid #dcf8ff;
+  text-decoration: none !important;
+  font-weight: bold;
+  display: inline-block;
+  transition: all 0.2s ease;
+}
+
+.nav-login:hover {
+  background-color: #0062bd;
+  border: 1px solid #0062bd;
+  color: #ffffff !important;
+}
+
+.nav-register {
+  color: #dcf8ff !important;
+  padding: 8px 20px !important;
+  border-radius: 6px;
+  border: 1px solid #dcf8ff;
+  text-decoration: none !important;
+  font-weight: bold;
+  display: inline-block;
+  transition: all 0.2s ease;
+}
+
+.nav-register:hover {
+  background-color: #187900;
+  border: 1px solid #187900;
+  color: #ffffff !important;
+}
+
+.nav-logout {
+  color: #dcf8ff !important;
+  padding: 8px 20px !important;
+  border-radius: 6px;
+  border: 1px solid #dcf8ff;
+  text-decoration: none !important;
+  font-weight: bold;
+  display: inline-block;
+  transition: all 0.2s ease;
+}
+
+.nav-logout:hover {
+  background-color: #c10518;
+  border: 1px solid #c10518;
+  color: #ffffff !important;
+}
+
+/* ------ INPUTS ------ */
+input.form-control,
+textarea.form-control {
+  border-radius: 5px;
+  font-size: 0.85rem;
+  background-color: #1a1a1a;
+  color: #dcf8ff;
+  border: 1px solid #333;
+}
+
+input.form-control:focus,
+textarea.form-control:focus {
+  border-color: #0062bd;
+  box-shadow: none;
+  background-color: #1a1a1a;
+  color: #dcf8ff;
+}
+
+.form-label {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #dcf8ff;
+}
+
+/* ------ LOGIN PAGE ------ */
+.login-page-wrapper {
+  min-height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-title {
+  margin-bottom: 30px;
+  font-weight: bold;
+  font-size: 2.5rem;
+  color: #dcf8ff;
+}
+
+.account-prompt {
+  font-size: 0.9rem;
+  color: #888;
+}
+
+/* ------ REGISTER PAGE ------ */
+.register-page-wrapper {
+  min-height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.register-title {
+  margin-bottom: 20px;
+  font-weight: bold;
+  font-size: 2.5rem;
+  color: #dcf8ff;
+}
+
+.btn-custom-register {
+  background-color: #187900;
+  color: white;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  border-radius: 6px;
+  border: none;
+}
+
+.btn-custom-register:hover {
+  background-color: #105200;
+  color: white;
+}
+
+/* ------ LOGIN/REGISTER CARD ------ */
+.custom-card {
+  background-color: #111111;
+  border: 1px solid #ffffff10;
+  border-radius: 12px;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.263);
+}
+
+.btn-custom-login {
+  background-color: #033a6e;
+  color: white;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  border-radius: 6px;
+  border: none;
+}
+
+.btn-custom-login:hover {
+  background-color: #175e8d;
+  color: white;
+}
+
+/* ------ HOME PAGE ------ */
+.card {
+  border-radius: 10px;
+  background-color: #1d1d1d;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s;
+  color: #dcf8ff;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.post-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.read-more-btn {
+  background-color: #033a6e;
+  color: white;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  border-radius: 6px;
+  border: none;
+}
+
+.read-more-btn:hover {
+  background-color: #175e8d;
+  color: white;
+}
+
+/* ------ CREATE POST PAGE ------ */
+.custom-post-bg {
+  background-color: #1d1d1d;
+  border-radius: 12px;
+}
+
+.btn-create-post {
+  background-color: #0062bd;
+  color: white;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  border-radius: 6px;
+  border: none;
+}
+.btn-create-post:hover {
+  background-color: #004a8f;
+  color: white;
+}
