@@ -42,7 +42,7 @@ router.put('/:id', auth, async (req, res) => {
   try {
     const post = await Post.findById(req.params.id)
     if (!post) return res.status(404).json({ error: 'Post not found' })
-    if (post.author.toString() !== req.user.id && req.user.role !== 'admin')
+    if (post.author.toString() !== req.user.id && !req.user.isAdmin)
       return res.status(403).json({ error: 'Unauthorized' })
     const updated = await Post.findByIdAndUpdate(req.params.id, req.body, { new: true })
     res.json(updated)
@@ -56,7 +56,7 @@ router.delete('/:id', auth, async (req, res) => {
   try {
     const post = await Post.findById(req.params.id)
     if (!post) return res.status(404).json({ error: 'Post not found' })
-    if (post.author.toString() !== req.user.id && req.user.role !== 'admin')
+    if (post.author.toString() !== req.user.id && !req.user.isAdmin)
       return res.status(403).json({ error: 'Unauthorized' })
     await Post.findByIdAndDelete(req.params.id)
     res.json({ message: 'Post deleted' })
